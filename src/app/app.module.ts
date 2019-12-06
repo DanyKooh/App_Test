@@ -11,17 +11,15 @@ import { AppComponent } from './app.component';
 import firebaseConfig from './firebase'
 import {AngularFireModule} from '@angular/fire';
 import{AngularFireAuthModule} from '@angular/fire/auth'
-import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { UserService } from './user.service';
-
-
-
+import { LineaComponent } from './components/linea/linea.component';
+import {BarraComponent} from './components/barra/barra.component'
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, LineaComponent, BarraComponent],
   entryComponents: [],
   imports: [
-    BrowserModule, 
+    BrowserModule,
     IonicModule.forRoot(), 
     AppRoutingModule,
     AngularFireModule.initializeApp(firebaseConfig),
